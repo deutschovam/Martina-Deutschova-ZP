@@ -1,0 +1,85 @@
+.header {
+    margin: 0 auto;
+    &__logo {
+        max-width: 130px;
+        height: auto;
+        border-radius: 50%;
+        border: 1px solid #9b9b9b;
+    } 
+    &__title {
+        color: $primary;
+        font-size: 28px;
+        font-weight: 600;
+    }
+    &__container {
+        margin: 30px auto;
+        text-align: center;
+    }
+    &__menu-checkbox {
+        position: absolute;
+        left: -9999px;
+    }
+    &__menu-toggler {
+        cursor: pointer;
+        font-size: 36px;
+        margin: 0 calc(50% - 13px);
+    }
+    &__menu-list {
+        display: none;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background-image: url(/images/background.jpg);
+        box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
+    }
+    &__menu-item {
+        border-bottom: 1px solid $primary;
+    }
+    &__menu-link {
+        font-size: 18px;
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+        color: $primary;
+        text-align: center;
+    }
+    &__menu-link:hover,
+    &__menu-link:focus,
+    &__menu-link:active {
+        font-weight: 600;
+    }
+    &__menu-item--active &__menu-link {
+        font-weight: 600;
+    }
+    &__menu-checkbox:checked ~ .header__menu-list {
+        display: block;
+    }
+    @media screen and (min-width: 640px) { 
+        &__logo {
+            max-width: 150px;
+        } 
+    }
+    @media screen and (min-width: 1000px) { 
+         &__container {
+        max-width: 1000px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 30px;
+        }
+        &__menu-toggler {
+            display: none;
+        }
+        &__menu {
+            max-width: 100%; 
+        }
+        &__menu-list {
+            display: flex !important;
+            justify-content: center;  
+        }
+        &__menu-item {
+            border: 0;
+            padding: 0 15px;
+        }
+    }    
+} 

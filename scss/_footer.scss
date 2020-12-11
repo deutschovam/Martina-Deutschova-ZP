@@ -1,0 +1,37 @@
+.footer {
+    background-color: $primary;
+    color: $primarylight;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    &__container {
+       padding: 15px 0;
+    }
+    &__icon-fb {
+        max-width: 30px;
+        height: auto;
+    }
+   @media screen and (min-width: 1000px) {  
+       &__container {
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           padding: 0 $spacer;
+           max-width: 1000px;
+           height: 100px;
+           margin: 0 auto;  
+       }
+       &__fb {
+           display: flex;
+           justify-content: space-between;
+           text-align: baseline;
+           position: relative;
+           padding-right: 50px;
+       }
+       &__icon {
+           position: absolute;
+           top: calc(50% - 15px);
+           right: 0;
+       }
+   }
+}

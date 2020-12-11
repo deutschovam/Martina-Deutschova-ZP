@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aktivní centrum Krteček</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <a href="/"><img class="header__logo" src="/images/logo.jpg" alt="logo"></a>
+            <h1 class="header__title">Aktivní centrum Krteček</h1>
+        </div>
+        <nav class="header__menu">
+            <input type="checkbox" class="header__menu-checkbox" id="menu-checkbox">
+            <label for="menu-checkbox" class="header__menu-toggler">☰</label>
+            <ul class="header__menu-list">
+                <li class="header__menu-item {% if menu==='domu' %}header__menu-item--active{% endif %}">
+                    <a class="header__menu-link" href="/">Domů</a>
+                </li>
+                <li class="header__menu-item {% if menu==='krouzky' %}header__menu-item--active{% endif %}">
+                    <a class="header__menu-link" href="/krouzky">Kroužky</a>
+                </li>
+                <li class="header__menu-item {% if menu==='sluzby' %}header__menu-item--active{% endif %}">
+                    <a class="header__menu-link" href="/dalsisluzby">Další služby</a>
+                </li>
+                <li class="header__menu-item {% if menu==='onas' %}header__menu-item--active{% endif %}">
+                    <a class="header__menu-link" href="/onas">O nás</a>
+                </li>
+                <li class="header__menu-item {% if menu==='cenik' %}header__menu-item--active{% endif %}">
+                    <a class="header__menu-link" href="/cenik">Ceník</a>
+                </li>
+                <li class="header__menu-item {% if menu==='kontakt' %}header__menu-item--active{% endif %}">
+                    <a class="header__menu-link" href="/kontakt">Kontakt</a>
+                </li>
+            </ul>
+        </nav>
+    </header> 

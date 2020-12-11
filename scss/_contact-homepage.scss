@@ -1,0 +1,47 @@
+.contact-hp {
+    width: 100%;
+    margin: $spacer * 2 auto;
+    &__card {
+        margin: $spacer;
+        max-width: 100%;
+        font-size: 14px;
+        background-image: url(/images/background.jpg);
+        color: $primary;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+        padding-bottom: 10px;
+        text-align: center;
+    }
+    &__title {
+        padding: $spacer;
+    }
+    &__map {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto $spacer * 2 auto;
+        text-align: center;
+    }
+    &__icon-fb {
+        max-width: 30px;
+        height: auto;
+    }
+    @media screen and (min-width: 640px) {
+        & {
+            max-width: 550px;
+            margin: 0 auto;
+        }
+        &__card {
+            position: relative;
+        }
+    }
+    @media screen and (min-width: 1000px) {
+        & {
+            max-width: 900px;
+            margin: $spacer * 2 auto;
+            display: flex;
+            align-items: center;
+        }
+        &__title {
+            padding: 0;
+        }
+    }
+}

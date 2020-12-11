@@ -1,0 +1,48 @@
+.contact {
+    max-width: 100%;
+    margin: 0 auto $spacer auto;
+    &__person,
+    &__address {
+        margin: $spacer * 2 $spacer;
+        position: relative;
+    }
+    &__icon {
+        margin-top: 30px;
+    }
+    &__icon-fb {
+        width: 30px;
+        height: 30px;
+        margin-top: 10px;
+    }
+    &__hand {
+        width: 30px;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: -35px;
+    }
+    &__map-small {
+        text-align: center;
+        max-width: 100%;
+        height: auto;
+    }
+    &__map-large {
+        display: none;
+    }
+    @media screen and (min-width: 640px) {
+        & {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-bottom: $spacer * 2;
+        }
+    }
+    @media screen and (min-width: 1000px) {
+        &__map-small {
+            display: none;
+        }
+        &__map-large {
+            display: block;
+        }
+    }
+}

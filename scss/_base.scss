@@ -1,0 +1,21 @@
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: $primary;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 400;
+    background-image: url(/images/background.jpg);
+    background-position: center;
+}
+.main__title {
+    text-align: center;
+    margin: $spacer 0;
+    @media screen and (min-width: 640px) {
+        & {
+            margin: $spacer * 2;
+        }
+    }
+}
